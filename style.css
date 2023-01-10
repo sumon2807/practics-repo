@@ -46,7 +46,7 @@
 .stage .stage-ball{
     width: 50px;
     height: 50px;
-    background: rgb(158, 3, 3);
+    background: #9e0303;
     border-radius: 50%;
     position: relative;
     animation: sliding 4s ease-in-out 1s infinite alternate;
@@ -54,7 +54,7 @@
 }
 @keyframes sliding {
     0%{
-        background: rgb(1, 136, 8);
+        background: #018808;
         left: 0;
         top: 0;
         transform: scale(.5);
@@ -65,14 +65,14 @@
     }
     50%{
         top: 0px;
-        background: rgb(1, 136, 8);
+        background: #018808;
     }
     75%{
         top: 200px;
-        background: rgb(158, 3, 3);
+        background: #9e0303;
     }
     100%{
-        background: rgb(1, 136, 8);
+        background: #018808;
         left: 750px;
         top: 0;
     }
@@ -82,4 +82,23 @@
     height: 100px;
     background: rgb(54, 149, 238);
     transform: rotate(30deg);
+}
+/* Calander with Grid & display:flex */
+.calander{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 30px repeat(5, 75px);
+    gap: 20px;
+    column-gap: 10px;
+}
+.date, .day{
+    background: #6cb5fa;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.other-month{
+    background: #bbbbbb;
 }
